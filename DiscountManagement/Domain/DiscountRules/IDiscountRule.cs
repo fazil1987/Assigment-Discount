@@ -1,4 +1,6 @@
-﻿namespace DiscountManagement.Domain.DiscountRules
+﻿using DiscountManagement.Domain.DomainObjects;
+
+namespace DiscountManagement.Domain.DiscountRules
 {
     public interface IDiscountRule
     {

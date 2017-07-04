@@ -1,4 +1,5 @@
 ﻿using System;
+using DiscountManagement.Domain.DomainObjects;
 using DiscountManagement.Extension;
 
 namespace DiscountManagement.Domain.DiscountRules
@@ -6,7 +7,8 @@ namespace DiscountManagement.Domain.DiscountRules
     public class LoyalCustomerDiscountRule : PercentBasedDiscountRuleBase 
     {
         private readonly int _yearsAsCustomer;
-        private readonly DateTime? _dateToCompare; // Useful in unit testing as system.DateTime is very unreliable
+        private readonly DateTime? _dateToCompare; 
+        // Useful in unit testing as system.DateTime due to its dynamic nature, not ideal candidate for unit Testing
 
         public LoyalCustomerDiscountRule(decimal percent, int yearsAsCustomer, Func<Product, bool> productCriteria,
             DateTime? dateToCompare = null) : base(percent, productCriteria)
@@ -18,6 +20,6 @@ namespace DiscountManagement.Domain.DiscountRules
         protected override bool IsMatch(User user)
         {
             return user.GetType() == typeof(Customer) && user.IsCustomerFor(_yearsAsCustomer, _dateToCompare);
-            }
+        }
     }
 }

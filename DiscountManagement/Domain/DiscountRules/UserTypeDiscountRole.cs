@@ -1,4 +1,5 @@
 ﻿using System;
+using DiscountManagement.Domain.DomainObjects;
 
 namespace DiscountManagement.Domain.DiscountRules
 {

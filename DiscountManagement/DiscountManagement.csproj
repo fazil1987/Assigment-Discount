@@ -49,24 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Bill.cs" />
-    <Compile Include="Domain\DiscountRules\IDiscountEvaluator.cs" />
-    <Compile Include="Domain\Order.cs" />
-    <Compile Include="Domain\Product.cs" />
-    <Compile Include="Domain\CartItem.cs" />
+    <Compile Include="Domain\DomainObjects\Bill.cs" />
+    <Compile Include="Domain\DiscountEvaluator\IDiscountEvaluator.cs" />
+    <Compile Include="Domain\DomainObjects\Order.cs" />
+    <Compile Include="Domain\DomainObjects\Product.cs" />
+    <Compile Include="Domain\DomainObjects\CartItem.cs" />
     <Compile Include="Extension\CustomerExtension.cs" />
     <Compile Include="Domain\DiscountRules\BillAmountDiscountRule.cs" />
-    <Compile Include="Domain\DiscountRules\DiscountEvaluator.cs" />
+    <Compile Include="Domain\DiscountEvaluator\DiscountEvaluator.cs" />
     <Compile Include="Domain\DiscountRules\IDiscountRule.cs" />
     <Compile Include="Domain\DiscountRules\LoyalCustomerDiscountRule.cs" />
-    <Compile Include="Test\DiscountCalculatorTest.cs" />
-    <Compile Include="Test\DiscountEvaluatorTest.cs" />
+    <Compile Include="Test\UnitTest\DiscountCalculatorTest.cs" />
+    <Compile Include="Test\UnitTest\DiscountEvaluatorTest.cs" />
     <Compile Include="Domain\DiscountRules\UserTypeDiscountRole.cs" />
     <Compile Include="Domain\DiscountRules\PercentBasedDiscountRuleBase.cs" />
-    <Compile Include="Test\BillTest.cs" />
-    <Compile Include="Domain\User.cs" />
+    <Compile Include="Test\UnitTest\BillTest.cs" />
+    <Compile Include="Domain\DomainObjects\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test\TestData.cs" />
+    <Compile Include="Test\IntegrationTest\BillGenerationTest.cs" />
+    <Compile Include="Test\UnitTest\TestData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
