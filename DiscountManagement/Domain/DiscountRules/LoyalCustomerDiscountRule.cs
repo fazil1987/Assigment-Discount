@@ -1,6 +1,7 @@
 ﻿using System;
 using DiscountManagement.Domain.DomainObjects;
-using DiscountManagement.Extension;
+using DiscountManagement.Domain.Extension;
+using DiscountManagement.Domain.NamedCriteria;
 
 namespace DiscountManagement.Domain.DiscountRules
 {
@@ -10,8 +11,8 @@ namespace DiscountManagement.Domain.DiscountRules
         private readonly DateTime? _dateToCompare; 
         // Useful in unit testing as system.DateTime due to its dynamic nature, not ideal candidate for unit Testing
 
-        public LoyalCustomerDiscountRule(decimal percent, int yearsAsCustomer, Func<Product, bool> productCriteria,
-            DateTime? dateToCompare = null) : base(percent, productCriteria)
+        public LoyalCustomerDiscountRule(decimal percent, int yearsAsCustomer, DateTime? dateToCompare = null,
+            Criteria<Product> productCriteria = null) : base(percent, productCriteria)
         {
             _yearsAsCustomer = yearsAsCustomer;
             _dateToCompare = dateToCompare ?? DateTime.Now;

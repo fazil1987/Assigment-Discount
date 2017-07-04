@@ -49,16 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\NamedCriteria\Criteria.cs" />
     <Compile Include="Domain\DomainObjects\Bill.cs" />
     <Compile Include="Domain\DiscountEvaluator\IDiscountEvaluator.cs" />
     <Compile Include="Domain\DomainObjects\Order.cs" />
     <Compile Include="Domain\DomainObjects\Product.cs" />
     <Compile Include="Domain\DomainObjects\CartItem.cs" />
-    <Compile Include="Extension\CustomerExtension.cs" />
+    <Compile Include="Domain\Extension\CustomerExtension.cs" />
     <Compile Include="Domain\DiscountRules\BillAmountDiscountRule.cs" />
     <Compile Include="Domain\DiscountEvaluator\DiscountEvaluator.cs" />
     <Compile Include="Domain\DiscountRules\IDiscountRule.cs" />
     <Compile Include="Domain\DiscountRules\LoyalCustomerDiscountRule.cs" />
+    <Compile Include="Domain\NamedCriteria\ProductExclusionCriteria.cs" />
     <Compile Include="Test\UnitTest\DiscountCalculatorTest.cs" />
     <Compile Include="Test\UnitTest\DiscountEvaluatorTest.cs" />
     <Compile Include="Domain\DiscountRules\UserTypeDiscountRole.cs" />

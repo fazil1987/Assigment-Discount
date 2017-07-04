@@ -3,6 +3,7 @@
 
 
 .vs/
+DiscountManagement/bin/
 DiscountManagement/obj/
 packages/
 DiscountManagement\.sln\.DotSettings\.user

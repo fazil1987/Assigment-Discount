@@ -1,11 +1,12 @@
 ﻿using System;
 using DiscountManagement.Domain.DomainObjects;
+using DiscountManagement.Domain.NamedCriteria;
 
 namespace DiscountManagement.Domain.DiscountRules
 {
     public class UserTypeDiscountRule<T> : PercentBasedDiscountRuleBase where T : User
     {
-        public UserTypeDiscountRule(decimal percent, Func<Product, bool> productCriteria = null) : base(percent, productCriteria)
+        public UserTypeDiscountRule(decimal percent, Criteria<Product> productCriteria) : base(percent, productCriteria)
         {
         }
 
@@ -14,4 +15,5 @@ namespace DiscountManagement.Domain.DiscountRules
             return user.GetType() == typeof(T);
         }
     }
+    
 }
